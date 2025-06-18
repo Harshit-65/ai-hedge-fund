@@ -19,4 +19,9 @@ RUN poetry config virtualenvs.create false \
 COPY . /app/
 
 # Default command (will be overridden by Docker Compose)
+# Create a non-root user
+RUN adduser --disabled-password --gecos "" --no-create-home appuser
+
+# Switch to non-root user
+USER appuser
 CMD ["python", "src/main.py"] 
