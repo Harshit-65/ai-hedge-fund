@@ -1,3 +1,4 @@
+import DOMPurify from "dompurify";
 import { Copy, Download } from 'lucide-react';
 import { useState } from 'react';
 
@@ -106,7 +107,7 @@ export function JsonOutputDialog({
                   minWidth: 'max-content',
                 }}
               >
-                <code dangerouslySetInnerHTML={{ __html: highlightedJson }} />
+                <code dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(highlightedJson) }} />
               </pre>
             </div>
           </div>
