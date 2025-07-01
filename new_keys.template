@@ -1,0 +1,19 @@
+# AWS Credentials Template
+# Copy this file to 'new_keys' and fill in your actual credentials
+# DO NOT commit the actual 'new_keys' file to version control
+
+# Option 1: Use environment variables (recommended)
+# Set these in your environment:
+# export AWS_ACCESS_KEY_ID=your_access_key_here
+# export AWS_SECRET_ACCESS_KEY=your_secret_key_here
+# export AWS_DEFAULT_REGION=your_region_here
+
+# Option 2: Use AWS credentials file
+# Configure using: aws configure
+# This creates ~/.aws/credentials with your keys
+
+# Option 3: If you must use a local file (not recommended)
+# Uncomment and fill in the lines below:
+# AWS_ACCESS_KEY_ID=your_access_key_here
+# AWS_SECRET_ACCESS_KEY=your_secret_key_here
+# AWS_DEFAULT_REGION=your_region_here
