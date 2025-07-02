@@ -95,7 +95,7 @@ export const api = {
                   const eventType = eventTypeMatch[1];
                   const eventData = JSON.parse(dataMatch[1]);
                   
-                  console.log(`Parsed ${eventType} event:`, eventData);
+    console.log("API request:", JSON.stringify(arguments));
                   
                   // Process based on event type
                   switch (eventType) {
