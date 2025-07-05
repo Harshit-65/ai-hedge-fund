@@ -248,3 +248,35 @@ If you have a feature request, please open an [issue](https://github.com/virattt
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## AWS Credentials Setup
+
+This project requires AWS credentials to function properly. **Never commit actual credentials to version control.**
+
+### Setup Options:
+
+1. **Environment Variables (Recommended for development):**
+   ```bash
+   export AWS_ACCESS_KEY_ID=your_access_key_here
+   export AWS_SECRET_ACCESS_KEY=your_secret_key_here
+   ```
+
+2. **AWS Credentials File:**
+   ```bash
+   aws configure
+   ```
+   Or manually create `~/.aws/credentials`:
+   ```
+   [default]
+   aws_access_key_id = your_access_key_here
+   aws_secret_access_key = your_secret_key_here
+   ```
+
+3. **IAM Roles (Recommended for production):**
+   Use IAM roles when running on AWS infrastructure (EC2, ECS, Lambda, etc.)
+
+### Security Notes:
+- Never commit credentials to version control
+- Use IAM roles with minimal required permissions
+- Rotate credentials regularly
+- Consider using AWS Secrets Manager for production environments
