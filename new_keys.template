@@ -1,0 +1,12 @@
+# AWS Credentials Template
+# DO NOT put actual credentials in this file!
+# 
+# Instead, set these environment variables:
+# export AWS_ACCESS_KEY_ID=your_access_key_here
+# export AWS_SECRET_ACCESS_KEY=your_secret_key_here
+#
+# Or use AWS credentials file: ~/.aws/credentials
+# Or use IAM roles for EC2 instances
+#
+# For more information, see:
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
