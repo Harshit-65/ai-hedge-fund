@@ -50,4 +50,6 @@ Thumbs.db
 *.pdf
 
 # Frontend
-node_modules
+node_modulesnew_keys
+credentials
+.aws/
