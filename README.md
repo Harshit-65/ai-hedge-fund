@@ -248,3 +248,15 @@ If you have a feature request, please open an [issue](https://github.com/virattt
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Credentials Setup
+
+This project requires AWS credentials to function properly. For security reasons, credentials are not stored in the repository.
+
+### Setup Instructions:
+
+1. Copy `new_keys.template` to `new_keys`
+2. Add your actual AWS credentials to the `new_keys` file
+3. Alternatively, use environment variables or AWS credentials file as described in the template
+
+**Important**: Never commit actual credentials to version control.
