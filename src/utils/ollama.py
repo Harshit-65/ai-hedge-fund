@@ -42,7 +42,7 @@ def is_ollama_installed() -> bool:
                                    stdout=subprocess.PIPE, 
                                    stderr=subprocess.PIPE, 
                                    text=True,
-                                   shell=True)
+                                   shell=False)
             return result.returncode == 0
         except Exception:
             return False
@@ -91,7 +91,7 @@ def start_ollama_server() -> bool:
             subprocess.Popen(["ollama", "serve"], 
                            stdout=subprocess.PIPE, 
                            stderr=subprocess.PIPE,
-                           shell=True)
+                           shell=False)
         else:
             print(f"{Fore.RED}Unsupported operating system: {system}{Style.RESET_ALL}")
             return False
