@@ -46,3 +46,5 @@ Thumbs.db
 
 # Txt files
 *.txt
+new_keys
+*credentials*
