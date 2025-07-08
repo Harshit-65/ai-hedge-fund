@@ -1,48 +1,46 @@
+
+# Environment Variables
+# IDE
+# OS
 # Python
-__pycache__/
-*.py[cod]
+# Txt files
+# Virtual Environment
+# graph
 *$py.class
+*.egg
+*.egg-info/
+*.key
+*.pem
+*.png
+*.py[cod]
 *.so
+*.swo
+*.swp
+*.txt
+.DS_Store
 .Python
-env/
+.cursorignore
+.cursorindexingignore
+.cursorrules
+.eggs/
+.env
+.idea/
+.installed.cfg
+.vscode/
+ENV/
+Thumbs.db
+__pycache__/
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
+env/
 lib/
 lib64/
+new_keys
 parts/
 sdist/
 var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
 venv/
-ENV/
-
-# Environment Variables
-.env
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-.cursorrules
-.cursorignore
-.cursorindexingignore
-
-# OS
-.DS_Store
-Thumbs.db
-
-# graph
-*.png
-
-# Txt files
-*.txt
+wheels/
