@@ -1,4 +1,5 @@
 import { Copy, Download } from 'lucide-react';
+import DOMPurify from "dompurify";
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -106,7 +107,7 @@ export function JsonOutputDialog({
                   minWidth: 'max-content',
                 }}
               >
-                <code dangerouslySetInnerHTML={{ __html: highlightedJson }} />
+                <code dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(highlightedJson) }} />
               </pre>
             </div>
           </div>
