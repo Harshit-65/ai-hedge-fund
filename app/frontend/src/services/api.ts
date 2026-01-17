@@ -95,7 +95,7 @@ export const api = {
                   const eventType = eventTypeMatch[1];
                   const eventData = JSON.parse(dataMatch[1]);
                   
-                  console.log(`Parsed ${eventType} event:`, eventData);
+                  console.log("%s", `Parsed ${eventType} event:`, eventData);
                   
                   // Process based on event type
                   switch (eventType) {
@@ -141,17 +141,17 @@ export const api = {
                       nodeContext.updateAgentNodes(params.selected_agents || [], 'ERROR');
                       break;
                     default:
-                      console.warn('Unknown event type:', eventType);
+                      console.warn("%s", 'Unknown event type:', eventType);
                   }
                 }
               } catch (err) {
-                console.error('Error parsing SSE event:', err, 'Raw event:', eventText);
+                console.error("%s", 'Error parsing SSE event:', err, 'Raw event:', eventText);
               }
             }
           }
         } catch (error: any) { // Type assertion for error
           if (error.name !== 'AbortError') {
-            console.error('Error reading SSE stream:', error);
+            console.error("%s", 'Error reading SSE stream:', error);
             // Mark all agents as error when there's a connection error
             const agentIds = params.selected_agents || [];
             nodeContext.updateAgentNodes(agentIds, 'ERROR');
@@ -164,7 +164,7 @@ export const api = {
     })
     .catch((error: any) => { // Type assertion for error
       if (error.name !== 'AbortError') {
-        console.error('SSE connection error:', error);
+        console.error("%s", 'SSE connection error:', error);
         // Mark all agents as error when there's a connection error
         const agentIds = params.selected_agents || [];
         nodeContext.updateAgentNodes(agentIds, 'ERROR');
